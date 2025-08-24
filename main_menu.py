@@ -47,20 +47,19 @@ def suggest_field():
 
 def user():
     while True:
-        print("\n--- Student Menu ---")
+       print("\n--- Student Menu ---")
         print("1. View Profile")
         print("2. Check Attendance")
         print("3. Fee Status")
         print("4. Library Records")
         print("5. Logout")
-        print("7. Admission: ")
 
         choice = input("Enter Your Choice: ")
 
         if choice == "1":
-             print("📌 Student Profile:")
-             print("Name: Rehmat")
-             print("ID: 101")
+            print("📌 Student Profile:")
+            print("Name: Rehmat")
+            print("ID: 101")
         elif choice == "2":
             print("📅 Attendance: 85%")
         elif choice == "3":
@@ -69,7 +68,7 @@ def user():
             print("📚 Library Books: 2 Issued")
         elif choice == "5":
             print("👋 Logout successful!")
-            break
+            break 
         else:
             print("❌ Invalid choice, try again.")
 
