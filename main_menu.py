@@ -45,8 +45,9 @@ def suggest_field():
     else:
         print("❌ Invalid Background")
 
-# Student login hone ke baad yeh menu dikhega
-def student_menu():
+
+# Student menu jab login ho jaye
+def user():
     while True:
         print("\n--- Student Menu ---")
         print("1. View Profile")
@@ -73,7 +74,8 @@ def student_menu():
         else:
             print("❌ Invalid choice, try again.")
 
-# Student login ka function
+
+# Login system
 def student_login():
     username = input("Enter your username: ")
     password = input("Enter your Password: ")
@@ -81,12 +83,12 @@ def student_login():
     user_pass = "1234"
 
     if username == user_name and password == user_pass:
-        student_menu()
+        user()
     else:
         print("❌ Invalid Email or Password!")
 
-# ======= Program Start =======
 
+# ======= Program Start =======
 print("\n===== Main Menu =====")
 print("1. Student Login")
 print("2. Suggest Field")
@@ -94,7 +96,6 @@ print("3. Exit")
 
 try:
     choice = int(input("Enter Your Choice: "))
-
     if choice == 1:
         student_login()
     elif choice == 2:
@@ -102,7 +103,6 @@ try:
     elif choice == 3:
         print("👋 Exiting...")
     else:
-        print("❌ Invalid choice! Please select 1, 2 or 3.")
-
+        print("❌ Invalid choice! Please select 1, 2, or 3.")
 except ValueError:
     print("❌ Please enter a valid number (1, 2, or 3).")
