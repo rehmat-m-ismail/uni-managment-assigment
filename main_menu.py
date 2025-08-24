@@ -1,3 +1,4 @@
+# Student ke liye field suggest karne wala function
 def suggest_field():
     name = input("Enter Student Name: ")
     percentage = float(input("Enter Percentage: "))
@@ -44,10 +45,10 @@ def suggest_field():
     else:
         print("❌ Invalid Background")
 
-
-def user():
+# Student login hone ke baad yeh menu dikhega
+def student_menu():
     while True:
-       print("\n--- Student Menu ---")
+        print("\n--- Student Menu ---")
         print("1. View Profile")
         print("2. Check Attendance")
         print("3. Fee Status")
@@ -68,29 +69,40 @@ def user():
             print("📚 Library Books: 2 Issued")
         elif choice == "5":
             print("👋 Logout successful!")
-            break 
+            break
         else:
             print("❌ Invalid choice, try again.")
 
-
+# Student login ka function
 def student_login():
     username = input("Enter your username: ")
     password = input("Enter your Password: ")
     user_name = "rehmat"
     user_pass = "1234"
 
-
     if username == user_name and password == user_pass:
-        user()
+        student_menu()
     else:
         print("❌ Invalid Email or Password!")
 
-choice = int(input("Enter Your Choice: "))
-if choice == 1:
-    student_login()
-elif choice == 2:
-    suggest_field()
-elif choice == 3:
-    print("👋 Exiting...")
-else:
-    print("❌ Invalid choice!")
+# ======= Program Start =======
+
+print("\n===== Main Menu =====")
+print("1. Student Login")
+print("2. Suggest Field")
+print("3. Exit")
+
+try:
+    choice = int(input("Enter Your Choice: "))
+
+    if choice == 1:
+        student_login()
+    elif choice == 2:
+        suggest_field()
+    elif choice == 3:
+        print("👋 Exiting...")
+    else:
+        print("❌ Invalid choice! Please select 1, 2 or 3.")
+
+except ValueError:
+    print("❌ Please enter a valid number (1, 2, or 3).")
